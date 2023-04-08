@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">   
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/59208bb87e.js" crossorigin="anonymous"></script>
+
+    <!-- Files -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Pomodoro</title>
+</head>
+<body>
+    <div class="container center">
+        <h1>Pomodoro</h1>
+        <div class="nav">
+            <p id="focus" class="selection">Focus</p>
+            <p id="break" class="selection">Break</p>
+        </div>
+        <div class="timer center">
+            <div id="countdown-bar" class="progress-overlay center"></div>
+            <div class="progress center">
+                <p id="clock">25:00</p>
+            </div>
+        </div>
+        <div class="button-box center">
+            <div class="stack-box">
+                <i id="start-button" class="button fa-solid fa-play"></i>
+                <i id="pause-button" class="button fa-solid fa-pause"></i>
+            </div>
+            <i id="replay-button" class="button fa-solid fa-arrow-rotate-right"></i>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
