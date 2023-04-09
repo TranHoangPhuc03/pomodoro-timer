@@ -25,7 +25,7 @@ I enjoy using productivity apps, especially the Pomodoro timer. Unfortunately, m
 
 It's not the best project ever, but I did my best.
 
-## 💻 Languague
+## 💻 Language
 * HTML
 * CSS
 * Javascript
