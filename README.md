@@ -16,7 +16,7 @@
     <img src="./README/demo.gif" alt="Project gif demo" width="80%">
     <br>
     <p>
-        🔗 <a href="https://hucphoang.github.io/pomodoro-timer/"  target="_blank">Link to website</a>
+        🔗 <a href="https://hucphoang.github.io/pomodoro-timer/" target="_blank">Link to website</a>
     </p>
 </div>
 
