@@ -1,46 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">   
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet" />
 
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/59208bb87e.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="./title-icon.png">
+        <!-- Icons -->
+        <script src="https://kit.fontawesome.com/59208bb87e.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/png" href="./assets/icons/title-icon.png" />
 
-    <!-- Files -->
-    <link rel="stylesheet" href="./style.css">
-    
-    <title>Pomodoro</title>
-</head>
-<body>
-    <div class="container center">
-        <h1>Pomodoro</h1>
-        <div class="nav">
-            <p id="focus" class="selection">Focus</p>
-            <p id="break" class="selection">Break</p>
-        </div>
-        <div class="timer center">
-            <div id="countdown-bar" class="progress-overlay center"></div>
-            <div class="progress center">
-                <p id="clock">25:00</p>
+        <!-- Files -->
+        <link rel="stylesheet" href="./assets/styles/index.css" />
+
+        <title>Pomodoro</title>
+    </head>
+
+    <body>
+        <div class="clock-container center-itself">
+            <div class="timer circle center-itself">
+                <div class="countdown circle center-childs">
+                    <div id="countdown-bar" class="circle"></div>
+                </div>
+                <div class="timer__display center-itself">
+                    <p id="display__duration" class="center-text">25:00</p>
+                    <p id="display__mode" class="center-text">focus</p>
+                </div>
+            </div>
+            <div class="control-timer horizontal-center-itself center-childs">
+                <div class="stack-box">
+                    <div id="play-btn" class="icon-btn center-childs">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div id="pause-btn" class="icon-btn center-childs">
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+                <div id="replay-btn" class="icon-btn center-childs">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+            </div>
+            <div class="setting-box">
+                <div id="setting-btn" class="icon-btn center-childs">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
             </div>
         </div>
-        <div class="button-box center">
-            <div class="stack-box">
-                <i id="start-button" class="button fa-solid fa-play"></i>
-                <i id="pause-button" class="button fa-solid fa-pause"></i>
+
+        <div id="setting" class="window center-itself">
+            <h2 class="center-text">Settings</h2>
+            <div id="close-btn" class="icon-btn center-childs">
+                <i class="fa-solid fa-xmark"></i>
             </div>
-            <i id="replay-button" class="button fa-solid fa-arrow-rotate-right"></i>
+            <div class="option-box">
+                <label for="focus-duration">Stay focus</label>
+                <span class="setting__unit">minutes</span>
+                <input type="number" name="focus-duration" id="focus-duration" />
+            </div>
+            <div class="option-box">
+                <label for="short-break-duration">Short break</label>
+                <span class="setting__unit">minutes</span>
+                <input type="number" name="short-break-duration" id="short-break-duration" />
+            </div>
+            <div id="long-break-box">
+                <div class="option-box">
+                    <label for="enable-long-break">Enable long break</label>
+                    <input type="checkbox" name="enable-long-break" id="enable-long-break" />
+                </div>
+                <div class="option-box">
+                    <label for="long-break-duration">Long break</label>
+                    <span class="setting__unit">minutes</span>
+                    <input type="number" name="long-break-duration" id="long-break-duration" />
+                </div>
+                <div class="option-box">
+                    <label for="cycles">Short break</label>
+                    <span class="setting__unit">cycles</span>
+                    <input type="number" name="cycles" id="cycles" />
+                </div>
+            </div>
+            <div class="control-setting horizontal-center-itself horizontal-center-childs">
+                <input id="save-btn" class="btn btn--inactive" type="button" value="Reset" />
+                <input id="reset-btn" class="btn btn--active" type="button" value="Save" />
+            </div>
         </div>
-    </div>
-    
-    <script src="./script.js"></script>
-</body>
+
+        <script src="./scripts/index.js"></script>
+    </body>
 </html>

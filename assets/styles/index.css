@@ -1,0 +1,256 @@
+:root {
+    --body-background-color: #181818;
+    --container-background-color-primary: #181818;
+    --container-background-color-secondary: #020202;
+    --container-shadow: rgba(255,205,0,0.46);
+    --countdown-cycle-bar-color: #FFCD00;
+    --color-font: #ffffff;
+    --color-setting-heading: #020202;
+    --color-option: #302B2B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-font);
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-background-color);
+}
+
+.center-childs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-center-childs {
+    display: flex;
+    justify-content: center;
+}
+
+.center-itself {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.horizontal-center-itself {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.stack-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.stack-box > * {
+    position: absolute;
+}
+
+.clock-container {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--container-background-color-primary) 50%, var(--container-background-color-secondary) 100%);
+    box-shadow: 0px 20px 30px -10px var(--container-shadow);
+    border-radius: 24px;
+}
+
+.timer {
+    width: 70%;
+    height: 70%;
+    box-shadow: 0px 0px 40px -15px var(--countdown-cycle-bar-color);
+}
+
+.countdown {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.countdown::before,
+.countdown::after {
+    position: absolute;
+    content: "";
+    background-color: var(--body-background-color);
+    border-radius: 50%;
+}
+
+.countdown::before {
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+}
+
+.countdown::after {
+    z-index: -1;
+    width: 90%;
+    height: 90%;
+}
+
+#countdown-bar {
+    z-index: -2;
+    width: 95%;
+    height: 95%;
+    background-image: conic-gradient(var(--body-background-color) 0deg, var(--countdown-cycle-bar-color) 0deg);
+}
+
+#display__duration {
+    font-size: 60px;
+}
+
+#display__mode {
+    font-size: 28px;
+}
+
+.control-timer {
+    bottom: 12px;
+}
+
+.icon-btn {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-btn:active {
+    color: var(--countdown-cycle-bar-color);
+}
+
+.play-pause-box {
+    display: inline-block;
+    position: relative;
+}
+
+#pause-btn {
+    visibility: hidden;
+}
+
+.setting-box {
+    position: absolute;
+    top: 15px;
+    right: 14px;
+}
+
+/* Settings window */
+.window {
+    width: 320px;
+    height: 380px;
+    border-radius: 12px;
+    background-color: #fff;
+    color: var(--color-setting-heading);
+    display: none;
+}
+
+.window h2 {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+#close-btn {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    color: var(--color-option);
+}
+
+.option-box {
+    position: relative;
+    font-size: 14px;
+    color: var(--color-option);
+    margin: 0 8px;
+}
+
+.option-box + .option-box {
+    margin-top: 12px;
+}
+
+/* Hide arrows spin of number input*/
+.option-box input::-webkit-outer-spin-button,
+.option-box input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.option-box label,
+.option-box span {
+    display: inline-block;
+    line-height: 26px;
+    min-width: 60px;
+}
+
+.option-box span {
+    text-align: right;
+    float: right;
+    margin-left: 4px;
+}
+
+.option-box input {
+    font-family: inherit;
+    color: inherit;
+    text-align: right;
+    padding: 2px 4px;
+    width: 40px;
+    border: 2px var(--color-option) solid;
+    border-radius: 6px;
+    float: right;
+}
+
+#long-break-box {
+    margin-top: 40px;
+    opacity: .5;
+}
+
+.control-setting {
+    width: 100%;
+    bottom: 10px;
+}
+
+.btn {
+    color: var(--color-font);
+    font-family: inherit;
+    font-weight: 900;
+    display: inline-block;
+    min-width: 80px;
+    padding: 4px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn + .btn {
+    margin-left: 12px;
+}
+
+.btn--active {
+    background-color: var(--body-background-color);
+}
+
+.btn--inactive {
+    background-color: var(--body-background-color);
+    opacity: .7;
+}
