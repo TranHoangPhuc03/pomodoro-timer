@@ -3,21 +3,12 @@
 </div>
 
 <p align="center">
-    <a href="#-Demo">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-Project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-Language">Language</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-Features">Features</a>
 </p>
 
 [//]: # 'Insert a video/gif demo below here and a link to web'
-
-## ▶ Demo
-
-<div align="center">
-    <p>
-        🔗 <a href="https://hucphoang.github.io/pomodoro-timer/">Link to website</a>
-    </p>
-</div>
 
 ## 📚 Project
 
