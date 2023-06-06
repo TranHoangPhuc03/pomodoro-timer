@@ -2,11 +2,11 @@
     --body-background-color: #181818;
     --container-background-color-primary: #181818;
     --container-background-color-secondary: #020202;
-    --container-shadow: rgba(255,205,0,0.46);
-    --countdown-cycle-bar-color: #FFCD00;
+    --container-shadow: rgba(255, 205, 0, 0.46);
+    --countdown-cycle-bar-color: #ffcd00;
     --color-font: #ffffff;
     --color-setting-heading: #020202;
-    --color-option: #302B2B;
+    --color-option: #302b2b;
 }
 
 * {
@@ -15,7 +15,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: 'Open Sans', sans-serif;
     color: var(--color-font);
     font-size: 1rem;
@@ -42,7 +43,6 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 .horizontal-center-itself {
     position: absolute;
@@ -92,7 +92,7 @@ html, body {
 .countdown::before,
 .countdown::after {
     position: absolute;
-    content: "";
+    content: '';
     background-color: var(--body-background-color);
     border-radius: 50%;
 }
@@ -192,8 +192,8 @@ html, body {
 /* Hide arrows spin of number input*/
 .option-box input::-webkit-outer-spin-button,
 .option-box input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .option-box label,
@@ -220,9 +220,13 @@ html, body {
     float: right;
 }
 
+.option-box input[type='checkbox'] {
+    transform: translateY(50%);
+}
+
 #long-break-box {
     margin-top: 40px;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .control-setting {
@@ -252,5 +256,5 @@ html, body {
 
 .btn--inactive {
     background-color: var(--body-background-color);
-    opacity: .7;
+    opacity: 0.7;
 }
