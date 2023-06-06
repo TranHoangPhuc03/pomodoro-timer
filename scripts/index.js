@@ -107,7 +107,7 @@ startButton.addEventListener('click', () => {
             pause();
             timerVisibility();
         } else timeRemaining--;
-    }, 1);
+    }, 1000);
 
     const pause = () => {
         isPause = true;
