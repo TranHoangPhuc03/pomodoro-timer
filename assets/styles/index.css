@@ -258,3 +258,17 @@ body {
     background-color: var(--body-background-color);
     opacity: 0.7;
 }
+
+@keyframes btnClicked {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(4px);
+    }
+}
+
+.btn:active,
+.icon-btn:active {
+    animation: btnClicked 0.2s;
+}
