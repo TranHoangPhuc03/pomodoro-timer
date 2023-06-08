@@ -6,6 +6,8 @@
     <a href="#-Project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-Language">Language</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-Features">Features</a>
+    <br>
+    <a href="https://tranhoangphuc03.github.io/pomodoro-timer/">🔗 Link to website 🔗</a>
 </p>
 
 [//]: # 'Insert a video/gif demo below here and a link to web'
@@ -24,7 +26,7 @@ It's not the best project ever, but I did my best.
 
 ## 📃 Features
 
--   [x] Focus time = 25 minutes
--   [x] Break time = 5 minutes
--   [x] Timer play/pause/replay button
--   [x] Playing a sound when timer end
+-   [x] Adding a long-break mode
+-   [x] Customizing the duration and number of cycles for the long-break mode
+-   [x] Play/pause/replay buttons
+-   [x] Playing a sound when the timer ends
